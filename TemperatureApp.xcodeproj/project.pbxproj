@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		ABB7DD14293109DA0080ABAC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB7DD13293109DA0080ABAC /* AppDelegate.swift */; };
 		ABB7DD16293109DA0080ABAC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB7DD15293109DA0080ABAC /* SceneDelegate.swift */; };
-		ABB7DD18293109DA0080ABAC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB7DD17293109DA0080ABAC /* ViewController.swift */; };
+		ABB7DD18293109DA0080ABAC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB7DD17293109DA0080ABAC /* LoginViewController.swift */; };
 		ABB7DD1B293109DA0080ABAC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABB7DD19293109DA0080ABAC /* Main.storyboard */; };
 		ABB7DD1D293109E10080ABAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABB7DD1C293109E10080ABAC /* Assets.xcassets */; };
 		ABB7DD20293109E10080ABAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABB7DD1E293109E10080ABAC /* LaunchScreen.storyboard */; };
+		ABB7DD28293125B80080ABAC /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB7DD27293125B80080ABAC /* RegisterViewController.swift */; };
+		ABB7DD302931578C0080ABAC /* TemperatureConverterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB7DD2F2931578C0080ABAC /* TemperatureConverterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		ABB7DD10293109DA0080ABAC /* TemperatureApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TemperatureApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABB7DD13293109DA0080ABAC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABB7DD15293109DA0080ABAC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		ABB7DD17293109DA0080ABAC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		ABB7DD17293109DA0080ABAC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		ABB7DD1A293109DA0080ABAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ABB7DD1C293109E10080ABAC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ABB7DD1F293109E10080ABAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ABB7DD21293109E10080ABAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ABB7DD27293125B80080ABAC /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		ABB7DD2F2931578C0080ABAC /* TemperatureConverterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureConverterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +44,7 @@
 		ABB7DD07293109DA0080ABAC = {
 			isa = PBXGroup;
 			children = (
+				ABB7DD2F2931578C0080ABAC /* TemperatureConverterViewController.swift */,
 				ABB7DD12293109DA0080ABAC /* TemperatureApp */,
 				ABB7DD11293109DA0080ABAC /* Products */,
 			);
@@ -58,11 +63,12 @@
 			children = (
 				ABB7DD13293109DA0080ABAC /* AppDelegate.swift */,
 				ABB7DD15293109DA0080ABAC /* SceneDelegate.swift */,
-				ABB7DD17293109DA0080ABAC /* ViewController.swift */,
+				ABB7DD17293109DA0080ABAC /* LoginViewController.swift */,
 				ABB7DD19293109DA0080ABAC /* Main.storyboard */,
 				ABB7DD1C293109E10080ABAC /* Assets.xcassets */,
 				ABB7DD1E293109E10080ABAC /* LaunchScreen.storyboard */,
 				ABB7DD21293109E10080ABAC /* Info.plist */,
+				ABB7DD27293125B80080ABAC /* RegisterViewController.swift */,
 			);
 			path = TemperatureApp;
 			sourceTree = "<group>";
@@ -138,9 +144,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ABB7DD18293109DA0080ABAC /* ViewController.swift in Sources */,
+				ABB7DD18293109DA0080ABAC /* LoginViewController.swift in Sources */,
 				ABB7DD14293109DA0080ABAC /* AppDelegate.swift in Sources */,
 				ABB7DD16293109DA0080ABAC /* SceneDelegate.swift in Sources */,
+				ABB7DD28293125B80080ABAC /* RegisterViewController.swift in Sources */,
+				ABB7DD302931578C0080ABAC /* TemperatureConverterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
