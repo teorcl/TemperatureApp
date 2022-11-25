@@ -15,6 +15,8 @@ class RegisterViewController: UIViewController {
         static let ERROR_PASSWORD: String = "Las contraseñas no coinciden"
         static let ERROR_USER: String = "El usuario ya existe"
         static let REGISTER_SUCCESSFUL: String = "Registro exitoso"
+        static let empty: String = ""
+        static let invalidEmail: String = "Correo no válido"
     }
     
     // MARK: - Outlets
@@ -25,10 +27,10 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var resultLabel: UILabel!
     
     var message: String = ""
+    var saveRegister = [String : String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //setUpView()
     }
     
     @IBAction func createButtonPressed() {
@@ -41,19 +43,7 @@ class RegisterViewController: UIViewController {
     }
     
     private func validateData(email: String, password: String, confirmPassword: String){
-        if email == "" || password == "" || confirmPassword == "" {
-            message = Const.emptyField
-        }else{
-            if email != "" && (password != confirmPassword) {
-                message = Const.ERROR_PASSWORD
-            } else{
-                if email == Const.existingUser && (password == confirmPassword) {
-                    message = Const.ERROR_USER
-                }else{ // Credenciales correctas
-                    message = Const.REGISTER_SUCCESSFUL
-                }
-            }
-        }
+        message = getScenario(email: email, password: password, confirmPassword: confirmPassword)
         setUpResultLabel(message: message)
     }
     
@@ -66,6 +56,42 @@ class RegisterViewController: UIViewController {
         
     }
     
+    private func isValidEmail(email: String) -> Bool {
+        let emailReg = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
+        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailReg)
+        return emailTest.evaluate(with: email)
+    }
+    
+    private func arePasswordeSame(password: String, confirmPassword: String) -> Bool {
+        return password == confirmPassword
+    }
+    
+    private func getScenario(email: String, password: String, confirmPassword: String) -> String {
+        var scenario = String()
+        if email == Const.empty || password == Const.empty || confirmPassword == Const.empty {
+            scenario = Const.emptyField
+        }else{
+            if isValidEmail(email: email) && !arePasswordeSame(password: password, confirmPassword: confirmPassword) {
+                scenario = Const.ERROR_PASSWORD
+            } else{
+                if email == Const.existingUser && arePasswordeSame(password: password, confirmPassword: confirmPassword) {
+                    scenario = Const.ERROR_USER
+                }else{
+                    // Credenciales correctas
+                    if isValidEmail(email: email) && arePasswordeSame(password: password, confirmPassword: confirmPassword){
+                        saveRegister[email] = password
+                        scenario = Const.REGISTER_SUCCESSFUL
+                    }else{
+                        scenario = Const.invalidEmail
+                    }
+                    
+                }
+            }
+        }
+        return scenario
+    }
+    
+    // Crear un grandiente como subcapa
     private func setUpView(){
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = view.bounds
