@@ -279,7 +279,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Conversor de Temperatura" id="vfV-Oy-hWX">
-                        <barButtonItem key="rightBarButtonItem" title="Cerrar" id="INq-q7-fbR">
+                        <barButtonItem key="rightBarButtonItem" title="Logout" id="INq-q7-fbR">
                             <color key="tintColor" systemColor="systemRedColor"/>
                             <connections>
                                 <action selector="onClaseButtonTapped:" destination="Tgi-hR-oGP" id="Ppt-Up-XEu"/>
