@@ -15,7 +15,6 @@ class RegisterViewController: UIViewController {
         static let ERROR_PASSWORD: String = "Las contraseñas no coinciden"
         static let ERROR_USER: String = "El usuario ya existe"
         static let REGISTER_SUCCESSFUL: String = "Registro exitoso"
-        static let empty: String = ""
         static let invalidEmail: String = "Correo no válido"
     }
     
@@ -68,7 +67,7 @@ class RegisterViewController: UIViewController {
     
     private func getScenario(email: String, password: String, confirmPassword: String) -> String {
         var scenario = String()
-        if email == Const.empty || password == Const.empty || confirmPassword == Const.empty {
+        if email.isEmpty || password.isEmpty || confirmPassword.isEmpty {
             scenario = Const.emptyField
         }else{
             if isValidEmail(email: email) && !arePasswordeSame(password: password, confirmPassword: confirmPassword) {

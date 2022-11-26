@@ -45,5 +45,8 @@ class TemperatureConverterViewController: UIViewController {
     }
 
     
-
+    @IBAction func onClaseButtonTapped(_ sender: UIBarButtonItem) {
+        dismiss(animated: true)
+    }
+    
 }

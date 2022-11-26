@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="temperatura" translatesAutoresizingMaskIntoConstraints="NO" id="crR-jZ-eEK">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="winter" translatesAutoresizingMaskIntoConstraints="NO" id="crR-jZ-eEK">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5AV-QE-9qb">
@@ -32,15 +32,15 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Pa7-hW-x7w">
                                         <rect key="frame" x="60" y="312.66666666666669" width="273" height="126.66666666666669"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Correo electrónico" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a8u-P2-ClE">
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Correo electrónico" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="a8u-P2-ClE">
                                                 <rect key="frame" x="0.0" y="0.0" width="273" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aIW-HI-xpe">
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contraseña" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="aIW-HI-xpe">
                                                 <rect key="frame" x="0.0" y="44" width="273" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oIE-G6-pMk">
                                                 <rect key="frame" x="0.0" y="88" width="273" height="38.666666666666657"/>
@@ -62,9 +62,12 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="623-Gc-1Nf">
-                                        <rect key="frame" x="153" y="717.66666666666663" width="87" height="34.333333333333371"/>
+                                        <rect key="frame" x="150.33333333333334" y="717.66666666666663" width="92.666666666666657" height="34.333333333333371"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Registro"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Registro">
+                                            <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                            <color key="baseForegroundColor" systemColor="labelColor"/>
+                                        </buttonConfiguration>
                                         <connections>
                                             <segue destination="QiP-SW-R8u" kind="show" id="DDE-E2-5OR"/>
                                         </connections>
@@ -76,7 +79,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="0.33272538273971275" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="0.079062136063664593" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="Pa7-hW-x7w" firstAttribute="leading" secondItem="5AV-QE-9qb" secondAttribute="leading" constant="60" id="1fi-x2-Do8"/>
                                     <constraint firstAttribute="trailing" secondItem="Pa7-hW-x7w" secondAttribute="trailing" constant="60" id="2Eq-yQ-q1t"/>
@@ -109,14 +112,14 @@
                         <outlet property="emailTextField" destination="a8u-P2-ClE" id="Ae5-qh-P62"/>
                         <outlet property="passwordTextField" destination="aIW-HI-xpe" id="oJ3-Zh-zA1"/>
                         <outlet property="resultLabel" destination="aTd-g4-ASk" id="DJT-Dq-6th"/>
-                        <segue destination="Tgi-hR-oGP" kind="presentation" identifier="temperatureConverter_segue" modalPresentationStyle="fullScreen" id="9gL-Bl-rCc"/>
+                        <segue destination="y3I-i8-8vc" kind="presentation" identifier="temperatureConverter_segue" modalPresentationStyle="fullScreen" id="9gL-Bl-rCc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="31" y="8"/>
         </scene>
-        <!--Register View Controller-->
+        <!--Registro-->
         <scene sceneID="I1s-SX-lKx">
             <objects>
                 <viewController id="QiP-SW-R8u" customClass="RegisterViewController" customModule="TemperatureApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -196,7 +199,7 @@
                             <constraint firstItem="uM5-Tl-2s1" firstAttribute="trailing" secondItem="e2s-vu-NvZ" secondAttribute="trailing" id="x23-tc-LeK"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Ge4-4j-bMv"/>
+                    <navigationItem key="navigationItem" title="Registro" id="Ge4-4j-bMv"/>
                     <connections>
                         <outlet property="confirmPasswordTextField" destination="hGK-b4-wpe" id="Fep-S1-fcs"/>
                         <outlet property="createButton" destination="G6b-r8-EDj" id="r1E-h3-gui"/>
@@ -218,7 +221,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="tNG-xW-4jm">
-                                <rect key="frame" x="60" y="119" width="273" height="180"/>
+                                <rect key="frame" x="60" y="163" width="273" height="180"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="180" id="PaU-Xi-SMf"/>
                                 </constraints>
@@ -275,7 +278,14 @@
                             <constraint firstItem="Aea-Ql-O6f" firstAttribute="centerY" secondItem="hdx-oM-UgU" secondAttribute="centerY" constant="-20" id="rxT-G6-06L"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Conversor de Temperatura" id="vfV-Oy-hWX"/>
+                    <navigationItem key="navigationItem" title="Conversor de Temperatura" id="vfV-Oy-hWX">
+                        <barButtonItem key="rightBarButtonItem" title="Cerrar" id="INq-q7-fbR">
+                            <color key="tintColor" systemColor="systemRedColor"/>
+                            <connections>
+                                <action selector="onClaseButtonTapped:" destination="Tgi-hR-oGP" id="Ppt-Up-XEu"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="resultLabel" destination="j7E-Qo-VKt" id="D6W-tM-yTv"/>
                         <outlet property="temperatureTextField" destination="3pe-Ur-Iw6" id="db1-0z-EWO"/>
@@ -283,7 +293,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iTK-z4-teI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="593" y="696"/>
+            <point key="canvasLocation" x="1518.3206106870227" y="695.77464788732402"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="9nQ-mT-ldC">
@@ -302,16 +312,37 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i2q-Gv-rB5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-60" y="-27"/>
+            <point key="canvasLocation" x="-650" y="8"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Fmk-kB-rXV">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="y3I-i8-8vc" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QK5-1w-QU8">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Tgi-hR-oGP" kind="relationship" relationship="rootViewController" id="dAe-LV-aK9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EMP-iK-VuU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="591.60305343511448" y="695.77464788732402"/>
         </scene>
     </scenes>
     <resources>
         <image name="logo" width="166.66667175292969" height="166.66667175292969"/>
         <image name="registrobg" width="640" height="427.5"/>
-        <image name="temperatura" width="500" height="375"/>
+        <image name="winter" width="243.5" height="365"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

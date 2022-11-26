@@ -28,6 +28,7 @@ class LoginViewController: UIViewController {
     
     @IBAction func loginButtonPressed(_ sender: UIButton) {
         processCredential()
+        passwordTextField.text?.removeAll()
     }
     
     func processCredential(){
@@ -47,7 +48,7 @@ class LoginViewController: UIViewController {
         if result {
             //Mensaje de exito
             message = ""
-            performSegue(withIdentifier: Constant.temperatureConverter, sender: nil)
+            performSegue(withIdentifier: Constant.temperatureConverter, sender: self)
         } else {
             //Mensaje de error
             message = Constant.failureValidationMessage
