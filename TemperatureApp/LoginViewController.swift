@@ -14,17 +14,14 @@ class LoginViewController: UIViewController {
         static let expectedPassword = "Password123*"
         static let successValidationMessage = "Conexion exitosa"
         static let failureValidationMessage = "Credenciales incorrectas"
+        static let noMessage = String()
         static let temperatureConverter = "temperatureConverter_segue"
     }
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var resultLabel: UILabel!
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
+    
     
     @IBAction func loginButtonPressed(_ sender: UIButton) {
         processCredential()
@@ -44,19 +41,29 @@ class LoginViewController: UIViewController {
     }
     
     func processValidationResult(result:Bool){
-        let message : String
         if result {
-            //Mensaje de exito
-            message = ""
-            performSegue(withIdentifier: Constant.temperatureConverter, sender: self)
+            updateLabel(label: resultLabel, message: Constant.noMessage, hidden: true)
+            excuteTransition()
         } else {
-            //Mensaje de error
-            message = Constant.failureValidationMessage
+            updateLabel(label: resultLabel, message: Constant.failureValidationMessage, hidden: false)
+            //showError(error: Constant.failureValidationMessage)
         }
-        resultLabel.text = message
-        resultLabel.isHidden = false
+        
     }
 
+    private func excuteTransition(){
+        performSegue(withIdentifier: Constant.temperatureConverter, sender: self)
+    }
+    
+    /*private func showError(error: String){
+        resultLabel.text = error
+        resultLabel.isHidden = false
+    }*/
+    
+    private func updateLabel(label: UILabel, message: String?, hidden: Bool){
+        label.text = message
+        label.isHidden = hidden
+    }
 
 }
 

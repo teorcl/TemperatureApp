@@ -19,10 +19,6 @@ class TemperatureConverterViewController: UIViewController {
     @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet weak var temperatureTextField: UITextField!
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-    }
     
     @IBAction func convertButtonPressed(_ sender: Any) {
         convertTempertature()
